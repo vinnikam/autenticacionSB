@@ -21,7 +21,7 @@ public class UsuarioControlador implements Serializable {
     UsuarioSevicio usuarioSevicio;
 
     @GetMapping("/{codigo}")
-    public ResponseEntity<Usuario> obtenerPorId(@PathVariable("serial") Long codigo) {
+    public ResponseEntity<Usuario> obtenerPorId(@PathVariable("codigo") Long codigo) {
 
         return ResponseEntity.ok(usuarioSevicio.buscarXId(codigo));
     }
