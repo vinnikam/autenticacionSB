@@ -22,4 +22,7 @@ public class UsuarioSevicio implements Serializable {
     public List<Usuario> buscarTodos(){
         return this.usuarioRepositorio.findAll();
     }
+    public void guardar(Usuario usuario){
+        this.usuarioRepositorio.save(usuario);
+    }
 }
